@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button"   id="btn" value="点我">
+</body>
+<script>
+//    var oBtn = document.getElementById('btn')
+//    oBtn.click=function () {
+//        console.log(111) 
+//    };
+//    //这个地方必须加个分号 不加不行
+//    (function () {
+//       console.log(222)
+//    })()
+    //函数的自执行过程
+    var a = function () {
+        console.log(111)
+    };
+    //赋值操作 也可以形成表达式
+    // 小括号 形成一个表达式
+    (function () {
+        console.log(1111)
+    })();
+    //逻辑运算符  整体取非
+    !function () {
+
+    }();
+    //数字运算符
+    +function ( ) {
+
+    }();
+    //都是先处理后面的值
+</script>
+</html>
