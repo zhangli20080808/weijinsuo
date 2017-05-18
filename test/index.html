@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        #main_ad{
+            height: 410px;
+        }
+
+        #main_ad .carousel-inner .item {
+            background-position: center center;
+            background-repeat: no-repeat;
+            /*如果图片没有410的高呢,在中间暂时一小块   cover铺满 把高放到最上面然后等比例缩放  按照较小边   知道铺满  contain相反 length如100px横向纵向 persentage */
+            background-size: cover;
+            /*什么时候这个410px不能用了 宽小于768的时候,我们自己做个媒体查询,控制高度什么时候使用*/
+        }
+
+        #main_ad .carousel-inner .item img {
+            /*这样就屏蔽掉了当图片不够窗口宽时*/
+            width: 100%;
+            height: 410px;
+        }
+    </style>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+    <!-- 轮播通栏-->
+    <section id="main_ad" class="carousel slide" data-ride="carousel">
+        <!-- 下面的小点点，活动指示器 -->
+        <ol class="carousel-indicators">
+            <li data-target="#main_ad" data-slide-to="0" class="active"></li>
+            <li data-target="#main_ad" data-slide-to="1"></li>
+            <li data-target="#main_ad" data-slide-to="2"></li>
+            <li data-target="#main_ad" data-slide-to="3"></li>
+        </ol>
+        <!-- 轮播项 -->
+        <div class="carousel-inner">
+            <!--我们的data属性来保存我们要的数据,没有任何功能-->
+
+            <div class="item active">
+                <img src="img/slide_01_2000x410.jpg" alt="">
+            </div>
+            <div class="item ">
+                <img src="img/slide_02_2000x410.jpg" alt="">
+            </div>
+            <div class="item ">
+                <img src="img/slide_03_2000x410.jpg" alt="">
+            </div>
+            <div class="item">
+                <img src="img/slide_04_2000x410.jpg" alt="">
+            </div>
+        </div>
+        <a class="left carousel-control" href="#main_ad" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#main_ad" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </section>
+</div>
+<script src="https://cdn.bootcss.com/jquery/1.8.2/jquery.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/2.0.4/bootstrap.min.js"></script></body>
+</html>
